@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<nav class="border-b shadow-md">
+  <div class="flex items-center justify-between gap-4 p-4 font-bold">
+    <a href="/" class="flex text-4xl"><h1>Medical Sport</h1></a>
+    <a id="menu-toggle">
+      <Icon class="h-[56px]" name="ic:round-menu" />
+    </a>
+  </div>
+  <div class="hidden flex-col gap-4 text-lg font-semibold p-4" id="hidden-menu">
+    <a href="/about">Magamól</a>
+    <a href="/contact">Kapcsolat</a>
+    <a href="/prices">Árlista</a>
+    <a href="/references">Referenciáim</a>
+  </div>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const hiddenMenu = document.getElementById("hidden-menu");
+    menuToggle?.addEventListener("click", () => {
+      hiddenMenu?.classList.toggle("hidden");
+      hiddenMenu?.classList.toggle("flex");
+    });
+  </script>
+</nav>
