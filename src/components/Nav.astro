@@ -4,10 +4,10 @@ import { Icon } from "astro-icon";
 
 <nav class="border-b shadow-md">
   <div class="flex items-center justify-between gap-4 p-4 font-bold">
-    <a href="/" class="flex text-4xl"><h1>Medical Sport</h1></a>
-    <a id="menu-toggle">
+    <a href="/" class="flex text-4xl cursor-pointer"><h1>Medical Sport</h1></a>
+    <button id="menu-toggle" class="cursor-pointer">
       <Icon class="h-[56px]" name="ic:round-menu" />
-    </a>
+    </button>
   </div>
   <div class="hidden flex-col gap-4 text-lg font-semibold p-4" id="hidden-menu">
     <a href="/about">Magamól</a>
