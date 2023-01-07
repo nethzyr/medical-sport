@@ -2,16 +2,25 @@
 import { Icon } from "astro-icon";
 ---
 
-<nav class="border-b shadow-md">
+<nav class="text-secondary">
   <div class="flex items-center justify-between gap-4 p-4 font-bold">
-    <a href="/" class="flex text-4xl cursor-pointer"><h1>Medical Sport</h1></a>
+    <a href="/" class="max-w-[240px] flex text-4xl cursor-pointer">
+      <img
+        class="inline"
+        src="/medicalsport_mono.png"
+        alt="medical sport logo"
+      />
+    </a>
     <button id="menu-toggle" class="cursor-pointer">
       <Icon class="h-[56px]" name="ic:round-menu" />
     </button>
   </div>
-  <div class="hidden flex-col gap-4 text-lg font-semibold p-4" id="hidden-menu">
+  <div
+    class="hidden flex-col gap-4 text-lg font-semibold p-4 items-center"
+    id="hidden-menu"
+  >
     <a href="/about">Magamól</a>
-    <a href="/contact">Kapcsolat</a>
+    <!-- <a href="/contact">Kapcsolat</a> -->
     <a href="/prices">Árlista</a>
     <a href="/references">Referenciáim</a>
   </div>

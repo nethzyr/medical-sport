@@ -1,105 +1,95 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "./Card.astro";
+import HeaderCard from "./HeaderCard.astro";
 ---
 
 <Layout title="Medical Sport">
-  <h2 class="text-3xl font-bold pb-6">Alkalmazott terápiáink</h2>
+  <HeaderCard title="Alkalmazott terápiáink" />
 
-  <article class="py-4">
-    <h3 class="font-semibold text-xl">Masszázsterápia</h3>
-    <p>
-      A masszázsterápia a mozgásszerv rendszer visszafordítható
-      funkciózavarainak felismerését és gyógyítását szolgálja. A diagnosztika
-      magában foglalja az izmok, a szalagok és a bőr reflexes reakcióinak -
-      csakúgy mint az ízületi mechanika, az izomfunkció és koordináció -
-      vizsgálatát. A terapeuta lokalizálja és analizálja a végtagi ízületek vagy
-      a csigolyák területén kialakult mozgásfunkció zavarait. Ennek az
-      analízisnek az alapján a különböző fogásokkal a fájdalom csillapítható, a
-      beteg hatékonyan gyógyul.
-    </p>
-  </article>
-  <article class="py-4">
-    <h3 class="font-semibold text-xl">Gyógytorna</h3>
-    <p>
-      A gyógytorna egy komplex terápia a prevenciótól a gyógykezelésen át a
-      rehabilitációig. A mozgásképesség megőrzése, a mozgásfunkció javítása
-      gyógytorna segítségével célzottan valósítható meg. A gyógytornát az izmok
-      erősítésére-nyújtására, az ízületi mozgásterjedelem fokozására, a
-      mozgáskoordináció, az izomerő javítására alkalmazzuk, célunk a zavart
-      szenvedett szerv, szervrendszer, testrész, testtáj funkciójának a
-      helyreállítása. A statikus, dinamikus gyakorlatokat a vendég
-      diagnózisának, aktuális állapotának ismeretében, személyre szabottan,
-      egyéni torna formájában a fokozatosság elvének megfelelően végezzük. A
-      professzionális gyógytorna lényege a diagnózisnak megfelelő speciális
-      technikák alkalmazása, az egész testre koncentrálva.
-    </p>
-  </article>
+  <Card
+    title="Masszázsterápia"
+    body={`A masszázsterápia a mozgásszerv rendszer visszafordítható funkciózavarainak felismerését és gyógyítását szolgálja. A diagnosztika magában foglalja az izmok, a szalagok és a bőr reflexes reakcióinak - csakúgy mint az ízületi mechanika, az izomfunkció és koordináció - vizsgálatát. A terapeuta lokalizálja és analizálja a végtagi ízületek vagy a csigolyák területén kialakult mozgásfunkció zavarait. Ennek az analízisnek az alapján a különböző fogásokkal a fájdalom csillapítható, a beteg hatékonyan gyógyul.`}
+  />
 
-  <h2 class="font-bold text-2xl">Eszközparkunk</h2>
-  <p>Fizikoterápiás eszközeink a XXI. század legmodernebb készülékei.</p>
+  <Card
+    title="Gyógytorna"
+    body={`A gyógytorna egy komplex terápia a prevenciótól a gyógykezelésen át a
+        rehabilitációig. A mozgásképesség megőrzése, a mozgásfunkció javítása
+        gyógytorna segítségével célzottan valósítható meg. A gyógytornát az
+        izmok erősítésére-nyújtására, az ízületi mozgásterjedelem fokozására, a
+        mozgáskoordináció, az izomerő javítására alkalmazzuk, célunk a zavart
+        szenvedett szerv, szervrendszer, testrész, testtáj funkciójának a
+        helyreállítása. A statikus, dinamikus gyakorlatokat a vendég
+        diagnózisának, aktuális állapotának ismeretében, személyre szabottan,
+        egyéni torna formájában a fokozatosság elvének megfelelően végezzük. A
+        professzionális gyógytorna lényege a diagnózisnak megfelelő speciális
+        technikák alkalmazása, az egész testre koncentrálva.`}
+  />
 
-  <article class="py-4">
-    <h3 class="font-semibold text-xl">Lökéshullám terápia</h3>
-    <p>
-      A lökéshullám terápiát (ESWT=extracorporeal shockwave therapy) különböző
-      mozgásszervi, izom vagy ízületi elváltozások esetében alkalmazzák.
-      Gyógyszerek, röntgen sugárzás, injeckciós beavatkozás nélkül érhető el
-      eredményes változás a következő panaszoknál: sarokfájdalom,
-      (sarokcsontkinövés, sarkantyú), talpfájdalom, Achilles fájdalom,
-      teniszkönyök, golfkönyök, vállfájdalom, csípőtáji fájdalmak,
-      sportsérülések: rándulás, izomhúzódás, izomszakadás, ugró térd.
-    </p>
-  </article>
-  <article class="py-4">
-    <h3 class="font-semibold text-xl">
-      Super Inductive System Mágnesterápia (SIS)
-    </h3>
-    <p>
-      A BTL SIS terápiája egy nagy intenzitású elektromágneses mezőt alkalmazó
-      csúcstechnika, amely bármilyen stádiumú fájdalomnál alkalmazható. A
-      kezelés három különböző fájdalomkontroll- elméleten alapul, melyek
-      mindegyikénél eltérő a frekvenciaspektrum. A kezelés ezért azonnali
-      enyhüléshez vezet, akár krónikus, akár akut stádiumban. Terápiás hatásai a
-      fájdalomcsillapítás mellett a csonttörés gyógyulás, izomrelaxáció és
-      ízületi mobilizáció.
-    </p>
-  </article>
-  <article class="py-4">
-    <h3 class="font-semibold text-xl">BTL-6000 nagyintenzitású lézer</h3>
-    <p>
-      A magas intenzitású lézer terápiának erős befolyása van az emberi
-      szövetekre. A legjelentősebb klinikai hatások:
-    </p>
-    <ul class="list-disc">
-      <li>Fájdalomcsillapító hatás</li>
-      <li>Gyulladáscsökkentő hatás</li>
-      <li>Ödéma csökkentő hatás</li>
-      <li>Értágító hatás</li>
-    </ul>
-    <p>
-      Ezek a hatások olyan pozitívan megalapozott és leellenőrzött
-      mechanizmusokra alapulnak, mint a:
-    </p>
-    <ul class="list-disc">
-      <li>Mikrocirkuláció javítása</li>
-      <li>Fájdalomérzékelés gátlása</li>
-      <li>Az Oxygen keringés, glükóz hasznosítás javítása</li>
-      <li>DNS-enzim szintézis stimulálása</li>
-      <li>
-        Fibroblaszt aktivitás fokozása (a keloidos hegek esetében hasznos)
-      </li>
-      <li>A sejtekben lejátszódó anyagcsere-folyamatok aktiválása</li>
-      <li>Gyulladásos folyamatok megváltoztatása</li>
-    </ul>
-    <p>A nagyintenzitású lézer kezelés előnyei</p>
-    <ul class="list-disc">
-      <li>
-        Nagy biztonsággal alkalmazható meghatározott terápiás területen és
-        szöveti mélységben
-      </li>
-      <li>Erős fájdalomcsillapító hatás</li>
-      <li>Esetleges műtéti beavatkozás megelőzése/ elkerülése</li>
-      <li>Hosszú távú hatásokkal</li>
-    </ul>
+  <HeaderCard
+    title="Eszközparkunk"
+    body="Fizikoterápiás eszközeink a XXI. század legmodernebb készülékei."
+  />
+
+  <Card
+    title="Lökéshullám terápia"
+    body={`A lökéshullám terápiát (ESWT=extracorporeal shockwave therapy) különböző
+        mozgásszervi, izom vagy ízületi elváltozások esetében alkalmazzák.
+        Gyógyszerek, röntgen sugárzás, injeckciós beavatkozás nélkül érhető el
+        eredményes változás a következő panaszoknál: sarokfájdalom,
+        (sarokcsontkinövés, sarkantyú), talpfájdalom, Achilles fájdalom,
+        teniszkönyök, golfkönyök, vállfájdalom, csípőtáji fájdalmak,
+        sportsérülések: rándulás, izomhúzódás, izomszakadás, ugró térd.`}
+  />
+
+  <Card
+    title="Super Inductive System Mágnesterápia (SIS)"
+    body={`A BTL SIS terápiája egy nagy intenzitású elektromágneses mezőt alkalmazó
+        csúcstechnika, amely bármilyen stádiumú fájdalomnál alkalmazható. A
+        kezelés három különböző fájdalomkontroll- elméleten alapul, melyek
+        mindegyikénél eltérő a frekvenciaspektrum. A kezelés ezért azonnali
+        enyhüléshez vezet, akár krónikus, akár akut stádiumban. Terápiás hatásai
+        a fájdalomcsillapítás mellett a csonttörés gyógyulás, izomrelaxáció és
+        ízületi mobilizáció.`}
+  />
+
+  <article class="p-6">
+    <Card
+      title="BTL-6000 nagyintenzitású lézer"
+      body={`A magas intenzitású lézer terápiának erős befolyása van az emberi
+        szövetekre. A legjelentősebb klinikai hatások:`}
+      list={[
+        "Fájdalomcsillapító hatás",
+        "Gyulladáscsökkentő hatás",
+        "Ödéma csökkentő hatás",
+        "Értágító hatás",
+      ]}
+    />
+
+    <Card
+      body={`Ezek a hatások olyan pozitívan megalapozott és leellenőrzött
+        mechanizmusokra alapulnak, mint a:`}
+      list={[
+        "Fájdalomcsillapítás",
+        "Gyulladáscsökkentés",
+        "Ödéma csökkentés",
+        "Értágítás",
+      ]}
+    />
+
+    <Card
+      body={`Ezek a hatások olyan pozitívan megalapozott és leellenőrzött
+        mechanizmusokra alapulnak, mint a:`}
+      list={[
+        "Mikrocirculáció javítása",
+        "Fájdalomcsillapítás",
+        "Az Oxygen keringés, glükóz hasznosítás javítása",
+        "DNS-enzim szintézis stimulálása",
+        "Fibroblaszt aktivitás fokozása (a keloidos hegek esetében hasznos)",
+        "A sejtekben lejátszódó anyagcsere-folyamatok aktiválása",
+        "Gyulladásos folyamatok megváltoztatása",
+      ]}
+    />
   </article>
 </Layout>
