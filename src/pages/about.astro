@@ -1,11 +1,13 @@
 ---
+import Card from "../components/Card.astro";
+import HeaderCard from "../components/HeaderCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Magamról">
-  <h2 class="text-3xl font-bold pb-6">Magamról</h2>
+  <HeaderCard title="Magamról" />
 
-  <div class="flex flex-col gap-4">
+  <Card>
     <p>
       Több évtizedes élsportolói pályafutásom során saját bőrömön tapasztaltam
       meg a sportsérülések, műtétek utáni rehabilitáció nehézségeit, a
@@ -22,7 +24,9 @@ import Layout from "../layouts/Layout.astro";
       szereztem, miközben versenyeim során külföldön járva mindig megfigyeltem az
       ottani szakemberek gyógyító tevékenységét.
     </p>
+  </Card>
 
+  <Card>
     <p>
       Cégem, a Medical Sport Kft. munkatársai nyelveket beszélő, minősített
       szakmai végzettséggel, több éves, egészségügyi intézményekben szerzett
@@ -30,7 +34,9 @@ import Layout from "../layouts/Layout.astro";
       gyógyító tevékenységüket. Jelenleg három gyógytornász és egy
       masszázs-terapeuta dolgozik velem.
     </p>
+  </Card>
 
+  <Card>
     <p>
       A terápiákat megelőzően személyesen konzultálok a betegekkel. Megtekintem
       a leleteiket, az orvosi zárójelentést, szükség esetén MRI-t, vagy további
@@ -47,5 +53,5 @@ import Layout from "../layouts/Layout.astro";
       kialakulásai, felgyorsulnak a rehabilitáció folyamatai. Minden esetben
       követem a betegek állapotát, gyógyulási és kezelési ritmusát.
     </p>
-  </div>
+  </Card>
 </Layout>
