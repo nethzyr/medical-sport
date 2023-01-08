@@ -1,80 +1,84 @@
 ---
+import Card from "../components/Card.astro";
+import HeaderCard from "../components/HeaderCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Árlista">
-  <h2 class="text-3xl font-bold pb-6">Árlista</h2>
+  <HeaderCard title="Árlista" />
 
-  <div class="max-w-xl flex flex-col m-auto">
-    <div class="flex justify-between py-1">
-      <div>Masszázsterápia</div>
-      <div class="flex-shrink-0 pl-2">12 000 Ft</div>
+  <Card>
+    <div class="max-w-xl flex flex-col m-auto">
+      <div class="flex justify-between py-2">
+        <div>Masszázsterápia</div>
+        <div class="flex-shrink-0 pl-2">12 000 Ft</div>
+      </div>
+
+      <div class="py-2"></div>
+
+      <div class="flex justify-between py-1">
+        <div>Egyéni gyógytorna</div>
+        <div class="flex-shrink-0 pl-2">10 000 Ft</div>
+      </div>
+
+      <div class="py-2"></div>
+
+      <div class="flex justify-between py-1">
+        <div>SIS mágnesterápia - 1 alkalommal 2 körös kezelés</div>
+        <div class="flex-shrink-0 pl-2">10 000 Ft</div>
+      </div>
+
+      <div class="flex justify-between py-1">
+        <div>SIS mágnesterápia - 1 alkalommal 3 körös kezelés</div>
+        <div class="flex-shrink-0 pl-2">12 000 Ft</div>
+      </div>
+
+      <div class="py-2"></div>
+
+      <div class="flex justify-between py-1">
+        <div>Lökéshullám terápia - 1 alkalom, testtájanként 2500 impulzus</div>
+        <div class="flex-shrink-0 pl-2">9 000 Ft</div>
+      </div>
+
+      <div class="flex justify-between py-1">
+        <div>Lökéshullám terápia - 5 alkalmas bérlet</div>
+        <div class="flex-shrink-0 pl-2">40 000 Ft</div>
+      </div>
+
+      <div class="py-2"></div>
+
+      <div class="flex justify-between py-1">
+        <div>Lézer kezelés - 1 alkalom</div>
+        <div class="flex-shrink-0 pl-2">11 000 Ft</div>
+      </div>
+
+      <div class="flex justify-between py-1">
+        <div>Lézer kezelés - 5 alkalmas bérlet</div>
+        <div class="flex-shrink-0 pl-2">50 000 Ft</div>
+      </div>
+
+      <div class="py-2"></div>
+
+      <div class="flex justify-between py-1">
+        <div>Komplex fizikoterápia - 1 alkalommal 2 kezelés</div>
+        <div class="flex-shrink-0 pl-2">20 000 Ft</div>
+      </div>
+
+      <div class="flex">
+        <div>Választható kezelések:</div>
+        <ul class="list-disc pl-8">
+          <li>SIS mágnesterápia</li>
+          <li>Lökéshullám terápia</li>
+          <li>Lézer kezelés</li>
+        </ul>
+      </div>
+
+      <div class="py-2"></div>
+
+      <div class="flex justify-between py-1">
+        <div>Kinesiotape használata /3 méterig/</div>
+        <div class="flex-shrink-0 pl-2">3 000 Ft</div>
+      </div>
     </div>
-
-    <div class="py-2"></div>
-
-    <div class="flex justify-between py-1">
-      <div>Egyéni gyógytorna</div>
-      <div class="flex-shrink-0 pl-2">10 000 Ft</div>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="flex justify-between py-1">
-      <div>SIS mágnesterápia - 1 alkalommal 2 körös kezelés</div>
-      <div class="flex-shrink-0 pl-2">10 000 Ft</div>
-    </div>
-
-    <div class="flex justify-between py-1">
-      <div>SIS mágnesterápia - 1 alkalommal 3 körös kezelés</div>
-      <div class="flex-shrink-0 pl-2">12 000 Ft</div>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="flex justify-between py-1">
-      <div>Lökéshullám terápia - 1 alkalom, testtájanként 2500 impulzus</div>
-      <div class="flex-shrink-0 pl-2">9 000 Ft</div>
-    </div>
-
-    <div class="flex justify-between py-1">
-      <div>Lökéshullám terápia - 5 alkalmas bérlet</div>
-      <div class="flex-shrink-0 pl-2">40 000 Ft</div>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="flex justify-between py-1">
-      <div>Lézer kezelés - 1 alkalom</div>
-      <div class="flex-shrink-0 pl-2">11 000 Ft</div>
-    </div>
-
-    <div class="flex justify-between py-1">
-      <div>Lézer kezelés - 5 alkalmas bérlet</div>
-      <div class="flex-shrink-0 pl-2">50 000 Ft</div>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="flex justify-between py-1">
-      <div>Komplex fizikoterápia - 1 alkalommal 2 kezelés</div>
-      <div class="flex-shrink-0 pl-2">20 000 Ft</div>
-    </div>
-
-    <div class="flex">
-      <div>Választható kezelések:</div>
-      <ul class="list-disc pl-8">
-        <li>SIS mágnesterápia</li>
-        <li>Lökéshullám terápia</li>
-        <li>Lézer kezelés</li>
-      </ul>
-    </div>
-
-    <div class="py-2"></div>
-
-    <div class="flex justify-between py-1">
-      <div>Kinesiotape használata /3 méterig/</div>
-      <div class="flex-shrink-0 pl-2">3 000 Ft</div>
-    </div>
-  </div>
+  </Card>
 </Layout>

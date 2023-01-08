@@ -11,7 +11,7 @@ const { title, body, list } = Astro.props;
 <section class="p-2 flex flex-col items-center">
   {title && <h3 class="font-bold text-2xl text-secondary pb-2">{title}</h3>}
 
-  <div class="border-4 border-primary p-6 max-w-xl">
+  <div class="border-4 border-primary p-6 max-w-xl w-full">
     {body && <p>{body}</p>}
 
     {
