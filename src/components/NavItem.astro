@@ -1,0 +1,41 @@
+---
+export interface Props {
+  title: string;
+  href?: string;
+  items?: [string, string][];
+}
+
+const { title, href, items } = Astro.props;
+---
+
+<div class="nav-item relative">
+  {
+    items ? (
+      <button class="hover:bg-primary block px-2 text-xl font-semibold hover:text-slate-50">
+        {title}
+      </button>
+    ) : (
+      <a
+        href={href}
+        class="hover:bg-primary block px-2 text-xl font-semibold hover:text-slate-50"
+      >
+        {title}
+      </a>
+    )
+  }
+
+  {
+    items && items.length > 0 && (
+      <div class="nav-children border-primary absolute hidden flex-col border-2 bg-slate-50 open:flex">
+        {items.map(([itemTitle, id]) => (
+          <a
+            href={`${href ?? ""}#${id}`}
+            class="hover:bg-primary block p-1 text-center hover:text-slate-50"
+          >
+            {itemTitle}
+          </a>
+        ))}
+      </div>
+    )
+  }
+</div>
