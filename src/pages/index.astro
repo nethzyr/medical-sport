@@ -5,91 +5,141 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Medical Sport">
-  <HeaderCard title="Alkalmazott terápiáink" />
+  <HeaderCard title="Bemutatkozás" id="intro" />
 
-  <Card
-    title="Masszázsterápia"
-    body={`A masszázsterápia a mozgásszerv rendszer visszafordítható funkciózavarainak felismerését és gyógyítását szolgálja. A diagnosztika magában foglalja az izmok, a szalagok és a bőr reflexes reakcióinak - csakúgy mint az ízületi mechanika, az izomfunkció és koordináció - vizsgálatát. A terapeuta lokalizálja és analizálja a végtagi ízületek vagy a csigolyák területén kialakult mozgásfunkció zavarait. Ennek az analízisnek az alapján a különböző fogásokkal a fájdalom csillapítható, a beteg hatékonyan gyógyul.`}
-  />
+  <Card>
+    <p>Üdvözlöm Kedves Látogató!</p>
+    <br />
+    <p>
+      Több évtizedes élsportolói pályafutásom során saját bőrömön tapasztaltam
+      meg a sportsérülések, műtétek utáni rehabilitáció nehézségeit, a
+      futószalag szintű ellátást, a különböző orvosi vizsgálatokhoz szükséges
+      utazások, várakozások időt rabló feszültségét. Már akkor tudtam és
+      elhatároztam, hogy sportolói pályafutásom befejezése után a mozgásszervi
+      problémák komplex megoldásával, megelőzésével, rehabilitációjával
+      szeretnék foglalkozni. Az álmom egy olyan hely létrehozása volt, ahol -
+      kiváló orvosi, masszázs- terapeuta, gyógytornász háttérrel, jól felszerelt
+      eszközparkkal - a diagnózis felállításától kezdve a komplexen alkalmazott
+      terápiák segítségével fel lehet gyorsítani a sérült testrészek fiziológiás
+      és élettani folyamatainak javulását, elősegítve a betegek gyógyulását,
+      életminőségének pozitív irányú változását. Az összetett kezelések
+      alkalmazásaival megelőzhetőek a sérülések kialakulásai, felgyorsulnak a
+      rehabilitáció folyamatai. Teamben dolgozom, munkám során szoros
+      kapcsolatot tartok szakorvosokkal, diagnosztákkal, radiológusokkal,
+      szükség esetén további szakorvosi vizsgálatokra teszek javaslatot, illetve
+      elősegítem az MRI foglalást a hét minden napján 24 órán belül, melynek
+      radiológiai szakvéleményét a vizsgálattól számítva 8 órán belül megkapja a
+      beteg.
+    </p>
+    <br />
+    <p>
+      Munkatársaim minősített szakmai végzettséggel, több éves egészségügyi
+      intézményekben szerzett tapasztalattal rendelkező, nyelveket beszélő
+      szakemberek, akikkel közösen valljuk, hogy: „Az egészség nem minden, de az
+      egészség nélkül minden semmi” (Arthur Schopenhauer)
+    </p>
+    <br />
+    <p>Szeretettel várjuk Önöket!</p>
+    <p class="text-right">
+      Kovács Gergely <br /> a Medical Sport Kft. ügyvezetője
+    </p>
+  </Card>
 
-  <Card
-    title="Gyógytorna"
-    body={`A gyógytorna egy komplex terápia a prevenciótól a gyógykezelésen át a
-        rehabilitációig. A mozgásképesség megőrzése, a mozgásfunkció javítása
-        gyógytorna segítségével célzottan valósítható meg. A gyógytornát az
-        izmok erősítésére-nyújtására, az ízületi mozgásterjedelem fokozására, a
-        mozgáskoordináció, az izomerő javítására alkalmazzuk, célunk a zavart
-        szenvedett szerv, szervrendszer, testrész, testtáj funkciójának a
-        helyreállítása. A statikus, dinamikus gyakorlatokat a vendég
-        diagnózisának, aktuális állapotának ismeretében, személyre szabottan,
-        egyéni torna formájában a fokozatosság elvének megfelelően végezzük. A
-        professzionális gyógytorna lényege a diagnózisnak megfelelő speciális
-        technikák alkalmazása, az egész testre koncentrálva.`}
-  />
+  <HeaderCard title="Munkatársak" id="colleagues" />
 
-  <HeaderCard
-    title="Eszközparkunk"
-    body="Fizikoterápiás eszközeink a XXI. század legmodernebb készülékei."
-  />
+  <Card title="Kovács Gergely - sport- és masszázsterapeuta">
+    <p>
+      A terápiákat megelőzően személyesen konzultál a betegekkel. Az orvosi,
+      diagnosztikai szakvélemény után - a leghatékonyabb terápia alkalmazása
+      érdekében - összeállítja a beteg gyógyulását, rehabilitációját elősegítő
+      összetett kezelési programot. Javaslatot tesz: masszázsterápiára,
+      gyógytornára, fizikoterápiás eszközök igénybevételére. Minden esetben
+      figyelemmel kíséri, dokumentálja a beteg gyógyulásának folyamatát, szükség
+      esetén további szakorvosi vizsgálatokra tesz javaslatot.
+    </p>
+    <br />
+    <p>Végzettség, továbbképzések:</p>
+    <ul class="list-disc pt-2 pl-8">
+      <li>2002. Semmelweis Egyetem Testnevelési és Sporttudományi Kara</li>
+      <li>
+        2007-2009 Gyakorlati gyógymasszőr képzés a Kapos Kft Felnőttoktatási
+        Központ keretében
+      </li>
+      <li>
+        2007-2009 sportélettan oktatás - Kapos Kft. Felnőttoktatás Központ
+      </li>
+      <li>2007. Kinezio tape taping alap tanfolyam</li>
+      <li>2008. Kinezio tape taping haladó tanfolyam</li>
+      <li>2008. Yumeiho - masszázs tanfolyam</li>
+      <li>2009. Korokan tanfolyam</li>
+      <li>2011. Pontmasszázs tanfolyam</li>
+      <li>2012. Frissítő Talpmasszázs tanfolyam</li>
+      <li>2013. Lökéshullám terápiás tanfolyam</li>
+    </ul>
+    <br />
+    <p>Szakmai tapasztalat:</p>
+    <ul class="list-disc pt-2 pl-8">
+      <li>BM Kórház</li>
+      <li>ORFI</li>
+      <li>Fájdalomambulancia</li>
+      <li>Mozgásdoktor</li>
+      <li>Balance Mozgásterápiás és Sport Innovációs Központ</li>
+      <li>
+        Tv2 Mokka - Szakmai tanácsadó <a
+          class="text-blue-600 visited:text-purple-600"
+          href="https://tv2.hu/mokka"
+          target="_blank">www.tv2.hu/mokka</a
+        >
+      </li>
+      <li>Fájdalom Ambulancia</li>
+      <li>Magyar Szinkronkorcsolya Válogatott</li>
+      <li>
+        Magyar Evezős Szövetség <a
+          class="text-blue-600 visited:text-purple-600"
+          href="https://hunrowing.hu/"
+          target="_blank">www.hunrowing.hu</a
+        >
+      </li>
+      <li>BSE női kézilabda- és kosárlabda csapat</li>
+      <li>Teniszgálák - Tennis Classics 2008, 2009, 2010, 2011</li>
+      <li>Kajak- Kenu Válogatott</li>
+      <li>Capital Medical Point Kft. rehabilitációs koordinátor</li>
+    </ul>
+  </Card>
 
-  <Card
-    title="Lökéshullám terápia"
-    body={`A lökéshullám terápiát (ESWT=extracorporeal shockwave therapy) különböző
-        mozgásszervi, izom vagy ízületi elváltozások esetében alkalmazzák.
-        Gyógyszerek, röntgen sugárzás, injeckciós beavatkozás nélkül érhető el
-        eredményes változás a következő panaszoknál: sarokfájdalom,
-        (sarokcsontkinövés, sarkantyú), talpfájdalom, Achilles fájdalom,
-        teniszkönyök, golfkönyök, vállfájdalom, csípőtáji fájdalmak,
-        sportsérülések: rándulás, izomhúzódás, izomszakadás, ugró térd.`}
-  />
+  <Card title="Zubor Mihály - gyógytornász">
+    <p>
+      Az orvosi diagnózist követően felméri a beteg állapotát, és az egyénre
+      szabott, a páciens igényeihez igazodó ízületi- és gerincvédelmi szempontok
+      alapján összeállított komplex terápia keretein belül elvégezteti a
+      beteggel az stabilizáló és funkcionális gyakorlatokat.
+    </p>
+    <br />
+    <p>Végzettség, továbbképzések:</p>
+    <ul class="list-disc pt-2 pl-8">
+      <li>Kinematic Taping (2015)</li>
+      <li>3D Scoliosis Terápia (2017)</li>
+      <li>McKenzie A tanfolyam (2018)</li>
+      <li>Medical Flossing (2019)</li>
+      <li>
+        CMD-Craniomandibularis Diszfunkciók terápiája-Temporomandibularis
+        Terápia (2020)
+      </li>
+    </ul>
+    <br />
+    <p>Szakmai tapasztalat:</p>
+    <ul class="list-disc pt-2 pl-8">
+      <li>Medical Point</li>
+      <li>
+        Szent Margit Kórház: Mozgásszervi Rehabilitációs Osztály
+        (2018.03.-2021.07.)
+      </li>
+      <li>Krónikus Belgyógyászati Osztály</li>
+    </ul>
+  </Card>
 
-  <Card
-    title="Super Inductive System Mágnesterápia (SIS)"
-    body={`A BTL SIS terápiája egy nagy intenzitású elektromágneses mezőt alkalmazó
-        csúcstechnika, amely bármilyen stádiumú fájdalomnál alkalmazható. A
-        kezelés három különböző fájdalomkontroll- elméleten alapul, melyek
-        mindegyikénél eltérő a frekvenciaspektrum. A kezelés ezért azonnali
-        enyhüléshez vezet, akár krónikus, akár akut stádiumban. Terápiás hatásai
-        a fájdalomcsillapítás mellett a csonttörés gyógyulás, izomrelaxáció és
-        ízületi mobilizáció.`}
-  />
-
-  <article class="p-6">
-    <Card
-      title="BTL-6000 nagyintenzitású lézer"
-      body={`A magas intenzitású lézer terápiának erős befolyása van az emberi
-        szövetekre. A legjelentősebb klinikai hatások:`}
-      list={[
-        "Fájdalomcsillapító hatás",
-        "Gyulladáscsökkentő hatás",
-        "Ödéma csökkentő hatás",
-        "Értágító hatás",
-      ]}
-    />
-
-    <Card
-      body={`Ezek a hatások olyan pozitívan megalapozott és leellenőrzött
-        mechanizmusokra alapulnak, mint a:`}
-      list={[
-        "Fájdalomcsillapítás",
-        "Gyulladáscsökkentés",
-        "Ödéma csökkentés",
-        "Értágítás",
-      ]}
-    />
-
-    <Card
-      body={`Ezek a hatások olyan pozitívan megalapozott és leellenőrzött
-        mechanizmusokra alapulnak, mint a:`}
-      list={[
-        "Mikrocirculáció javítása",
-        "Fájdalomcsillapítás",
-        "Az Oxygen keringés, glükóz hasznosítás javítása",
-        "DNS-enzim szintézis stimulálása",
-        "Fibroblaszt aktivitás fokozása (a keloidos hegek esetében hasznos)",
-        "A sejtekben lejátszódó anyagcsere-folyamatok aktiválása",
-        "Gyulladásos folyamatok megváltoztatása",
-      ]}
-    />
-  </article>
+  <HeaderCard title="Adatvédelmi tájékoztató" id="privacy-policy" />
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum vero et quisquam
+  autem itaque necessitatibus mollitia consequatur! Temporibus, perspiciatis eligendi!
+  At aperiam laudantium fuga reiciendis, porro harum placeat commodi dolorum?
 </Layout>

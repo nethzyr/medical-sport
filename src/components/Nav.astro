@@ -3,98 +3,100 @@ import { Icon } from "astro-icon";
 import NavItem from "./NavItem.astro";
 ---
 
-<nav class="text-secondary">
-  <div class="md:hidden">
-    <div class="flex items-center justify-between gap-4 p-4 font-bold">
-      <a href="/" class="flex max-w-[240px] cursor-pointer text-4xl">
-        <img
-          class="inline"
-          src="/medicalsport_mono.png"
-          alt="medical sport logo"
-        />
-      </a>
-      <button id="menu-toggle" class="cursor-pointer">
-        <Icon class="h-[56px]" name="ic:round-menu" />
-      </button>
-    </div>
-
-    <div
-      class="hidden flex-col items-center gap-4 p-4 text-lg font-semibold"
-      id="hidden-menu"
-    >
-      <a href="/">Főoldal</a>
-      <a href="/rehab">Rehabilitáció</a>
-      <a href="/devices">Eszközpark</a>
-      <a href="/opening-hours">Nyitvatartás</a>
-      <a href="/prices">Árlista</a>
-      <a href="/contact">Kapcsolat</a>
-      <a href="/references">Referenciák</a>
-    </div>
-    <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const hiddenMenu = document.getElementById("hidden-menu");
-      menuToggle?.addEventListener("click", () => {
-        hiddenMenu?.classList.toggle("hidden");
-        hiddenMenu?.classList.toggle("flex");
-      });
-    </script>
+<nav class="text-secondary md:hidden">
+  <div class="flex items-center justify-between gap-4 p-4 font-bold">
+    <a href="/" class="flex max-w-[240px] cursor-pointer text-4xl">
+      <img
+        class="inline"
+        src="/medicalsport_mono.png"
+        alt="medical sport logo"
+      />
+    </a>
+    <button id="menu-toggle" class="cursor-pointer">
+      <Icon class="h-[56px]" name="ic:round-menu" />
+    </button>
   </div>
 
-  <div class="hidden md:block">
-    <div class="flex flex-col items-center p-4">
-      <div>
-        <a href="/" class="flex max-w-[240px] cursor-pointer">
-          <img
-            class="inline"
-            src="/medicalsport_mono.png"
-            alt="medical sport logo"
-          />
-        </a>
-
-        <div class="pt-2 font-semibold">
-          1118 Budapest, Tűzkő utca 8. 8. em. 36.
-        </div>
-      </div>
-
-      <div class="flex items-center pt-2">
-        <NavItem
-          title={"Főoldal"}
-          items={[
-            ["Bemutatkozás", "intro"],
-            ["Munkatársaink", "colleagues"],
-            ["Adatvédelmi tájékoztató", "privacy-policy"],
-          ]}
-        />
-        <NavItem
-          title={"Rehabilitáció"}
-          href={"/rehab"}
-          items={[
-            ["Gyógytorna, fizioterápia", "physiotherapy"],
-            ["Masszázsterápia", "massage-therapy"],
-            ["Kinesio-tape kezelés", "kinesio-tape-treatment"],
-          ]}
-        />
-        <NavItem
-          title={"Eszközpark"}
-          href={"/devices"}
-          items={[
-            ["Lökéshullám terápia", "shock-wave-therapy"],
-            ["SIS", "sis"],
-            ["BTL-6000", "btl-6000"],
-          ]}
-        />
-        <NavItem title={"Nyitvatartás"} href={"/opening-hours"} />
-        <NavItem title={"Árlista"} href={"/prices"} />
-        <NavItem title={"Kapcsolat"} href={"/contact"} />
-        <NavItem title={"Referenciák"} href={"/references"} />
-      </div>
-    </div>
+  <div
+    class="hidden flex-col items-center gap-4 p-4 text-lg font-semibold"
+    id="hidden-menu"
+  >
+    <a href="/">Főoldal</a>
+    <a href="/rehab">Rehabilitáció</a>
+    <a href="/devices">Eszközpark</a>
+    <a href="/opening-hours">Nyitvatartás</a>
+    <a href="/prices">Árlista</a>
+    <a href="/contact">Kapcsolat</a>
+    <a href="/references">Referenciák</a>
   </div>
 
   <script>
-    const navItems = document.querySelectorAll(".nav-item");
-    navItems.forEach((navItem) => {
-      navItem.addEventListener("click", (event) => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const hiddenMenu = document.getElementById("hidden-menu");
+    menuToggle?.addEventListener("click", () => {
+      hiddenMenu?.classList.toggle("hidden");
+      hiddenMenu?.classList.toggle("flex");
+    });
+  </script>
+</nav>
+
+<div
+  class="hidden flex-col items-center pt-4 text-center text-secondary md:flex"
+>
+  <a href="/" class="flex max-w-[240px] cursor-pointer">
+    <img class="inline" src="/medicalsport_mono.png" alt="medical sport logo" />
+  </a>
+
+  <div class="pt-2 font-semibold">1118 Budapest, Tűzkő utca 8. 8. em. 36.</div>
+</div>
+
+<nav
+  class="sticky top-0 z-10 hidden border-b border-secondary bg-slate-50 text-secondary md:block"
+>
+  <div class="p-4">
+    <div class="flex justify-center">
+      <NavItem
+        title={"Főoldal"}
+        items={[
+          ["Bemutatkozás", "intro"],
+          ["Munkatársaink", "colleagues"],
+          ["Adatvédelmi tájékoztató", "privacy-policy"],
+        ]}
+      />
+      <NavItem
+        title={"Rehabilitáció"}
+        href={"rehab"}
+        items={[
+          ["Gyógytorna, fizioterápia", "physiotherapy"],
+          ["Masszázsterápia", "massage-therapy"],
+          ["Kinesio-tape kezelés", "kinesio-tape-treatment"],
+        ]}
+      />
+      <NavItem
+        title={"Eszközpark"}
+        href={"devices"}
+        items={[
+          ["Lökéshullám terápia", "shock-wave-therapy"],
+          ["SIS", "sis"],
+          ["BTL-6000", "btl-6000"],
+        ]}
+      />
+      <NavItem title={"Nyitvatartás"} href={"opening-hours"} />
+      <NavItem title={"Árlista"} href={"prices"} />
+      <NavItem title={"Kapcsolat"} href={"contact"} />
+      <NavItem title={"Referenciák"} href={"references"} />
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach((navItem) => {
+    const navLinks = navItem.querySelectorAll(".nav-children > a");
+
+    navLinks.forEach((navLink) => {
+      navLink.addEventListener("click", (event) => {
         navItems.forEach((navItem) => {
           navItem.querySelector(".nav-children")?.removeAttribute("open");
           const button = navItem.querySelector("button, a");
@@ -102,23 +104,33 @@ import NavItem from "./NavItem.astro";
           button?.classList.remove("text-slate-50");
         });
 
-        navItem.querySelector(".nav-children")?.setAttribute("open", "");
-        const button = navItem.querySelector("button, a");
-        button?.classList.add("bg-secondary");
-        button?.classList.add("text-slate-50");
-        button?.classList.remove("hover:bg-primary");
-        button?.classList.remove("hover:text-slate-50");
         event.stopPropagation();
       });
     });
-
-    document.addEventListener("click", () => {
+    navItem.addEventListener("click", (event) => {
       navItems.forEach((navItem) => {
         navItem.querySelector(".nav-children")?.removeAttribute("open");
         const button = navItem.querySelector("button, a");
         button?.classList.remove("bg-secondary");
         button?.classList.remove("text-slate-50");
       });
+
+      navItem.querySelector(".nav-children")?.setAttribute("open", "");
+      const button = navItem.querySelector("button, a");
+      button?.classList.add("bg-secondary");
+      button?.classList.add("text-slate-50");
+      button?.classList.remove("hover:bg-primary");
+      button?.classList.remove("hover:text-slate-50");
+      event.stopPropagation();
     });
-  </script>
-</nav>
+  });
+
+  document.addEventListener("click", () => {
+    navItems.forEach((navItem) => {
+      navItem.querySelector(".nav-children")?.removeAttribute("open");
+      const button = navItem.querySelector("button, a");
+      button?.classList.remove("bg-secondary");
+      button?.classList.remove("text-slate-50");
+    });
+  });
+</script>
