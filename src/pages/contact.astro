@@ -1,7 +1,22 @@
 ---
+import Card from "../components/Card.astro";
+import HeaderCard from "../components/HeaderCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Kapcsolat">
-  <h2 class="text-3xl font-bold pb-6">Kapcsolat</h2>
+<Layout title="Medical Sport">
+  <HeaderCard title="Kapcsolat" />
+
+  <Card>
+    <p>Telefon: Kovács Gergely +36-30-274-2682</p>
+    <br />
+    <p>E-mail: kovacs.gergely@medicalsport.hu</p>
+    <br />
+    <p>
+      Cím: 1023 Budapest, Bécsi út 3-5. szám, V. em. 55. ajtó. Kapucsengő: 61
+      (bejárat a Cserfa utca felől)
+    </p>
+    <!-- <br />
+    <p>Facebook üzleti oldal:</p> -->
+  </Card>
 </Layout>
