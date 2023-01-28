@@ -8,9 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy:preview": "firebase hosting:channel:deploy preview",
-    "deploy": "firebase deploy"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.0",
