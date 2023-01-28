@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-50">
+  <body class="h-screen bg-slate-50">
     <Nav />
     <main>
       <slot />
@@ -39,6 +39,14 @@ const { title } = Astro.props;
   html {
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
+  }
+  main {
+    min-height: calc(100% - 293px);
+  }
+  @media only screen and (min-width: 768px) {
+    main {
+      min-height: calc(100% - 370px);
+    }
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
