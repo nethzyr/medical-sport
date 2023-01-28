@@ -1,13 +1,18 @@
+---
+import { Image } from "@astrojs/image/components";
+import medicalWhiteImage from "../assets/medicalsport_feher.png";
+---
+
 <footer
   class="flex flex-col justify-center gap-6 bg-secondary p-6 text-center font-semibold text-slate-50 sm:flex-row sm:gap-16"
 >
   <div class="flex">
     <a href="/" class="m-auto w-[240px] cursor-pointer text-4xl">
-      <img
-        src="/medicalsport_feher.png"
+      <Image
+        src={medicalWhiteImage}
         alt="medical sport logo"
-        width="240"
-        height="106"
+        height={106}
+        width={240}
       />
     </a>
   </div>

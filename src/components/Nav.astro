@@ -1,17 +1,18 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
 import NavItem from "./NavItem.astro";
+import medicalSportMonoImage from "../assets/medicalsport_mono.png";
 ---
 
 <nav class="text-secondary md:hidden">
   <div class="flex items-center justify-between gap-4 p-4 font-bold">
     <a href="/" class="flex max-w-[240px] cursor-pointer text-4xl">
-      <img
-        class="inline"
-        src="/medicalsport_mono.png"
+      <Image
+        src={medicalSportMonoImage}
         alt="medical sport logo"
-        width="240"
-        height="106"
+        height={212}
+        width={480}
       />
     </a>
     <button id="menu-toggle" class="cursor-pointer" aria-label="open-menu">
@@ -46,12 +47,11 @@ import NavItem from "./NavItem.astro";
   class="hidden flex-col items-center pt-4 text-center text-secondary md:flex"
 >
   <a href="/" class="flex max-w-[240px] cursor-pointer">
-    <img
-      class="inline"
-      src="/medicalsport_mono.png"
+    <Image
+      src={medicalSportMonoImage}
       alt="medical sport logo"
-      width="240"
-      height="106"
+      height={106}
+      width={240}
     />
   </a>
 
