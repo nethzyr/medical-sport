@@ -43,9 +43,7 @@ import medicalSportMonoImage from "../assets/medicalsport_mono.png";
   </script>
 </nav>
 
-<div
-  class="hidden flex-col items-center pt-4 text-center text-secondary md:flex"
->
+<div class="hidden flex-col pt-4 pl-4 text-center text-secondary md:flex">
   <a href="/" class="flex max-w-[240px] cursor-pointer">
     <Image
       src={medicalSportMonoImage}
@@ -55,7 +53,11 @@ import medicalSportMonoImage from "../assets/medicalsport_mono.png";
     />
   </a>
 
-  <div class="pt-2 font-semibold">1023 Budapest, Bécsi út 3-5.</div>
+  <div class="pt-2 text-left font-semibold">+36-30-274-2682</div>
+  <div class="text-left font-semibold">kovacs.gergely@medicalsport.hu</div>
+  <div class="text-left font-semibold">
+    1118 Budapest, Tűzkő utca 8. 8. em. 36.
+  </div>
 </div>
 
 <nav
@@ -65,10 +67,11 @@ import medicalSportMonoImage from "../assets/medicalsport_mono.png";
     <div class="flex justify-center">
       <NavItem
         title={"Főoldal"}
+        href={"main"}
         items={[
           ["Bemutatkozás", "intro"],
           ["Munkatársaink", "colleagues"],
-          // ["Adatvédelmi tájékoztató", "privacy-policy"],
+          ["Adatvédelmi tájékoztató", "privacy-policy"],
         ]}
       />
       <NavItem
