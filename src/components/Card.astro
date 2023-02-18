@@ -8,10 +8,10 @@ export interface Props {
 const { title, body, list } = Astro.props;
 ---
 
-<section class="flex flex-col items-center p-2">
+<section class="flex flex-col items-center p-2 text-center">
   {title && <h3 class="text-secondary pb-2 text-2xl font-bold">{title}</h3>}
 
-  <div class="w-full max-w-xl border-4 border-primary p-6">
+  <div class="w-full max-w-xl border-4 border-primary p-4">
     {body && <p>{body}</p>}
 
     {

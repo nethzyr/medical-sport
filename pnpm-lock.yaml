@@ -136,7 +136,7 @@ packages:
       dset: 3.1.2
       is-docker: 3.0.0
       is-wsl: 2.2.0
-      undici: 5.19.1
+      undici: 5.20.0
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
@@ -2884,8 +2884,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: false
 
-  /rollup/3.16.0:
-    resolution: {integrity: sha512-9wE1H5N1SJqnROpQanBGJ7lrIitwlUYGj4Va4eyf3+vNhoIHLPLag2/CUGIiq3V9lHOBJB6zTsGsPvc50oeihg==}
+  /rollup/3.17.0:
+    resolution: {integrity: sha512-0zZQ0J4p0ZtTla6l8sheDTUyNfGZQDpU5h0nPHf6xtUXIzKK70LmB2IRR0wLnzaL8a02fjmsJy+XCncbSwOpjg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3217,8 +3217,8 @@ packages:
       busboy: 1.6.0
     dev: false
 
-  /undici/5.19.1:
-    resolution: {integrity: sha512-YiZ61LPIgY73E7syxCDxxa3LV2yl3sN8spnIuTct60boiiRaE1J8mNWHO8Im2Zi/sFrPusjLlmRPrsyraSqX6A==}
+  /undici/5.20.0:
+    resolution: {integrity: sha512-J3j60dYzuo6Eevbawwp1sdg16k5Tf768bxYK4TUJRH7cBM4kFCbf3mOnM/0E3vQYXvpxITbbWmBafaDbxLDz3g==}
     engines: {node: '>=12.18'}
     dependencies:
       busboy: 1.6.0
@@ -3365,7 +3365,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.16.0
+      rollup: 3.17.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: false

@@ -11,13 +11,13 @@ const { title, href, items } = Astro.props;
 <div class="nav-item relative">
   {
     items ? (
-      <button class="hover:bg-primary block px-2 text-xl font-semibold hover:text-slate-50">
+      <button class="hover:bg-primary block px-2 text-xl font-semibold underline hover:text-slate-50">
         {title}
       </button>
     ) : (
       <a
         href={href}
-        class="hover:bg-primary block px-2 text-xl font-semibold hover:text-slate-50"
+        class="hover:bg-primary block px-2 text-xl font-semibold underline hover:text-slate-50"
       >
         {title}
       </a>
@@ -26,7 +26,7 @@ const { title, href, items } = Astro.props;
 
   {
     items && items.length > 0 && (
-      <div class="nav-children border-primary absolute hidden flex-col border-2 bg-slate-50 open:flex">
+      <div class="nav-children border-primary absolute z-10 hidden flex-col border-2 bg-slate-50 open:flex">
         {items.map(([itemTitle, id]) => (
           <a
             href={`/${href ?? ""}#${id}`}

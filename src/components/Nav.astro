@@ -5,7 +5,7 @@ import NavItem from "./NavItem.astro";
 import medicalSportMonoImage from "../assets/medicalsport_mono.png";
 ---
 
-<nav class="text-secondary md:hidden">
+<!-- <nav class="text-secondary md:hidden">
   <div class="flex items-center justify-between gap-4 p-4 font-bold">
     <a href="/" class="flex max-w-[240px] cursor-pointer text-4xl">
       <Image
@@ -41,9 +41,8 @@ import medicalSportMonoImage from "../assets/medicalsport_mono.png";
       hiddenMenu?.classList.toggle("flex");
     });
   </script>
-</nav>
-
-<div class="hidden flex-col pt-4 pl-4 text-center text-secondary md:flex">
+</nav> -->
+<div class="flex flex-col pt-4 pl-4 text-center text-secondary md:text-left">
   <a href="/" class="flex max-w-[240px] cursor-pointer">
     <Image
       src={medicalSportMonoImage}
@@ -53,18 +52,18 @@ import medicalSportMonoImage from "../assets/medicalsport_mono.png";
     />
   </a>
 
-  <div class="pt-2 text-left font-semibold">+36-30-274-2682</div>
-  <div class="text-left font-semibold">kovacs.gergely@medicalsport.hu</div>
-  <div class="text-left font-semibold">
-    1118 Budapest, Tűzkő utca 8. 8. em. 36.
+  <div class="pt-2 font-semibold">+36-30-274-2682</div>
+  <div class="font-semibold">kovacs.gergely@medicalsport.hu</div>
+  <div class="font-semibold">
+    1023 Bécsi út 3-5 Cserfa utca felöl van a bejárat 5.-em 55 61-es kpcs
   </div>
 </div>
 
 <nav
-  class="sticky top-0 z-10 hidden border-b border-secondary bg-slate-50 text-secondary md:block"
+  class="sticky top-0 z-10 border-b border-secondary bg-slate-50 text-secondary"
 >
   <div class="p-4">
-    <div class="flex justify-center">
+    <div class="flex flex-wrap justify-center">
       <NavItem
         title={"Főoldal"}
         href={"main"}
