@@ -1,0 +1,81 @@
+---
+import Card from "../components/Card.astro";
+import HeaderCard from "../components/HeaderCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Medical Sport">
+  <HeaderCard
+    title="Eszközparkunk, fizikoterápiás eszközeink a XXI. század legmodernebb készülékei"
+  />
+
+  <HeaderCard title="Lökéshullám terápia" id="shock-wave-therapy">
+    <p class="text-center text-xs">(ESWT=extracorporeal shockwave therapy)</p>
+  </HeaderCard>
+
+  <Card>
+    <p>
+      <strong
+        >A különböző mozgásszervi, izom vagy ízületi elváltozások esetében
+        alkalmazzák.</strong
+      > Gyógyszerek, röntgen sugárzás, injeckciós beavatkozás nélkül érhető el eredményes
+      változás a következő panaszoknál:
+    </p>
+    <ul class="list-disc pl-8 text-left">
+      <li class="font-bold">sarokfájdalom, (sarokcsontkinövés, sarkantyú),</li>
+      <li class="font-bold">talpfájdalom,</li>
+      <li class="font-bold">Achilles fájdalom,</li>
+      <li class="font-bold">teniszkönyök, golfkönyök,</li>
+      <li class="font-bold">vállfájdalom,</li>
+      <li class="font-bold">csípőtáji fájdalmak,</li>
+      <li>
+        <strong>sportsérülések:</strong> rándulás, izomhúzódás, izomszakadás, ugró
+        térd.
+      </li>
+    </ul>
+  </Card>
+
+  <HeaderCard title="Super Inductive System Mágnesterápia (SIS)" id="sis" />
+
+  <Card>
+    <p>
+      A BTL SIS terápiája egy nagy intenzitású elektromágneses mezőt alkalmazó
+      csúcstechnika, amely <strong
+        >bármilyen stádiumú fájdalomnál alkalmazható.</strong
+      > A kezelés három különböző fájdalomkontroll-elméleten alapul, melyek mindegyikénél
+      eltérő a frekvenciaspektrum. A kezelés ezért azonnali enyhüléshez vezet, akár
+      krónikus, akár akut stádiumban. Terápiás hatásai <strong
+        >a fájdalomcsillapítás mellett</strong
+      >
+      a csonttörés gyógyulás, izomrelaxáció és ízületi mobilizáció.
+    </p>
+    <p>A következő panaszoknál érhető el eredményes változás:</p>
+    <ul class="list-disc pl-8 text-left font-bold">
+      <li>csonttörés</li>
+      <li>porckorongsérv, derékfájdalom</li>
+      <li>befagyott váll</li>
+      <li>sarokgyulladás</li>
+      <li>térdfájdalom</li>
+      <li>boka, csípő, probléma</li>
+      <li>izomszakadás, akut szakadás</li>
+    </ul>
+  </Card>
+
+  <HeaderCard title="BTL-6000 nagyintenzitású lézer" id="btl-6000" />
+
+  <Card>
+    <p>
+      A magas intenzitású lézer terápiának erős befolyása van az emberi
+      szövetekre. A legjelentősebb klinikai hatások:
+    </p>
+    <ul class="list-disc pl-8 text-left font-bold">
+      <li>Fájdalomcsillapító hatás</li>
+      <li>Gyulladáscsökkentő hatás</li>
+      <li>Ödéma csökkentő hatás</li>
+      <li>Értágító hatás</li>
+      <li>Mikrocirculáció javítása</li>
+      <li>Az oxygen keringés, glükóz hasznosítás javítása</li>
+      <li>A sejtekben lejátszódó anyagcsere-folyamatok aktiválása</li>
+    </ul>
+  </Card>
+</Layout>

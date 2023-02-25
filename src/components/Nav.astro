@@ -1,30 +1,38 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import NavItem from "./NavItem.astro";
+import medicalSportMonoImage from "../assets/medicalsport_mono.png";
 ---
 
-<nav class="text-secondary">
+<!-- <nav class="text-secondary md:hidden">
   <div class="flex items-center justify-between gap-4 p-4 font-bold">
-    <a href="/" class="max-w-[240px] flex text-4xl cursor-pointer">
-      <img
-        class="inline"
-        src="/medicalsport_mono.png"
+    <a href="/" class="flex max-w-[240px] cursor-pointer text-4xl">
+      <Image
+        src={medicalSportMonoImage}
         alt="medical sport logo"
+        height={212}
+        width={480}
       />
     </a>
-    <button id="menu-toggle" class="cursor-pointer">
+    <button id="menu-toggle" class="cursor-pointer" aria-label="open-menu">
       <Icon class="h-[56px]" name="ic:round-menu" />
     </button>
   </div>
+
   <div
-    class="hidden flex-col gap-4 text-lg font-semibold p-4 items-center"
+    class="hidden flex-col items-center gap-4 p-4 text-lg font-semibold"
     id="hidden-menu"
   >
-    <a href="/">Alkalmazott terápiáink</a>
-    <a href="/about-us">Rólunk</a>
-    <!-- <a href="/contact">Kapcsolat</a> -->
+    <a href="/">Főoldal</a>
+    <a href="/rehab">Rehabilitáció</a>
+    <a href="/devices">Eszközpark</a>
+    <a href="/opening-hours">Nyitvatartás</a>
     <a href="/prices">Árlista</a>
-    <!-- <a href="/references">Referenciáim</a> -->
+    <a href="/contact">Kapcsolat</a>
+    <a href="/references">Referenciák</a>
   </div>
+
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const hiddenMenu = document.getElementById("hidden-menu");
@@ -33,4 +41,106 @@ import { Icon } from "astro-icon";
       hiddenMenu?.classList.toggle("flex");
     });
   </script>
+</nav> -->
+<div class="flex flex-col pt-4 pl-4 text-center text-secondary md:text-left">
+  <a href="/" class="flex max-w-[240px] cursor-pointer">
+    <Image
+      src={medicalSportMonoImage}
+      alt="medical sport logo"
+      height={106}
+      width={240}
+    />
+  </a>
+
+  <div class="pt-2 font-semibold">+36-30-274-2682</div>
+  <div class="font-semibold">kovacs.gergely@medicalsport.hu</div>
+  <div class="font-semibold">
+    1023 Bécsi út 3-5 Cserfa utca felöl van a bejárat 5.-em 55 61-es kpcs
+  </div>
+</div>
+
+<nav
+  class="sticky top-0 z-10 border-b border-secondary bg-slate-50 text-secondary"
+>
+  <div class="p-4">
+    <div class="flex flex-wrap justify-center">
+      <NavItem
+        title={"Főoldal"}
+        href={"main"}
+        items={[
+          ["Bemutatkozás", "intro"],
+          ["Munkatársaink", "colleagues"],
+          ["Adatvédelmi tájékoztató", "privacy-policy"],
+        ]}
+      />
+      <NavItem
+        title={"Rehabilitáció"}
+        href={"rehab"}
+        items={[
+          ["Gyógytorna, fizioterápia", "physiotherapy"],
+          ["Masszázsterápia", "massage-therapy"],
+          ["Kinesio-tape kezelés", "kinesio-tape-treatment"],
+        ]}
+      />
+      <NavItem
+        title={"Eszközpark"}
+        href={"devices"}
+        items={[
+          ["Lökéshullám terápia", "shock-wave-therapy"],
+          ["SIS", "sis"],
+          ["BTL-6000", "btl-6000"],
+        ]}
+      />
+      <NavItem title={"Nyitvatartás"} href={"opening-hours"} />
+      <NavItem title={"Árlista"} href={"prices"} />
+      <NavItem title={"Kapcsolat"} href={"contact"} />
+      <NavItem title={"Referenciák"} href={"references"} />
+    </div>
+  </div>
 </nav>
+
+<script>
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach((navItem) => {
+    const navLinks = navItem.querySelectorAll(".nav-children > a");
+
+    navLinks.forEach((navLink) => {
+      navLink.addEventListener("click", (event) => {
+        navItems.forEach((navItem) => {
+          navItem.querySelector(".nav-children")?.removeAttribute("open");
+          const button = navItem.querySelector("button, a");
+          button?.classList.remove("bg-secondary");
+          button?.classList.remove("text-slate-50");
+        });
+
+        event.stopPropagation();
+      });
+    });
+    navItem.addEventListener("click", (event) => {
+      navItems.forEach((navItem) => {
+        navItem.querySelector(".nav-children")?.removeAttribute("open");
+        const button = navItem.querySelector("button, a");
+        button?.classList.remove("bg-secondary");
+        button?.classList.remove("text-slate-50");
+      });
+
+      navItem.querySelector(".nav-children")?.setAttribute("open", "");
+      const button = navItem.querySelector("button, a");
+      button?.classList.add("bg-secondary");
+      button?.classList.add("text-slate-50");
+      button?.classList.remove("hover:bg-primary");
+      button?.classList.remove("hover:text-slate-50");
+      event.stopPropagation();
+    });
+  });
+
+  document.addEventListener("click", () => {
+    navItems.forEach((navItem) => {
+      navItem.querySelector(".nav-children")?.removeAttribute("open");
+      const button = navItem.querySelector("button, a");
+      button?.classList.remove("bg-secondary");
+      button?.classList.remove("text-slate-50");
+    });
+  });
+</script>

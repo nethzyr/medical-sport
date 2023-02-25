@@ -2,19 +2,18 @@
 export interface Props {
   title?: string;
   body?: string;
+  id?: string;
 }
 
-const { title, body } = Astro.props;
+const { title, body, id } = Astro.props;
 ---
 
-<section class="bg-secondary text-slate-50 p-4">
-  {title && <h2 class="text-3xl text-center font-bold">{title}</h2>}
+<section class="relative bg-secondary p-4 text-slate-50">
+  <div id={id} class="invisible absolute top-[-60px] h-0"></div>
 
-  {
-    body && (
-      <p class="text-center font-semibold">
-        Fizikoterápiás eszközeink a XXI. század legmodernebb készülékei.
-      </p>
-    )
-  }
+  {title && <h2 class="text-center text-3xl font-bold">{title}</h2>}
+
+  {body && <p class="text-center font-semibold">{body}</p>}
+
+  <slot />
 </section>
